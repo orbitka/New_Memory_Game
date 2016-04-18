@@ -1,0 +1,34 @@
+html {
+  font-size: 10px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  background: purple;
+  max-width: 1000px;
+  border: dotted 15px black;
+  margin: auto;
+}
+
+header {
+  background: magenta;
+}
+
+footer {
+  background: magenta;
+}
+#cards-display {
+  background-color: yellow;
+}
+
+.single-card-div {
+  width: 150px
+  height: 100px;
+  background-color: salmon;
+}
+
+#game-container {
+  background: silver;
+}
