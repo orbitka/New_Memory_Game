@@ -12,7 +12,7 @@ SIMPLE MEMORY GAME
 
 - When all cards are turned face up the game ends.
 
-- ![Memory Game](images/wireframe.png)
+![Memory Game](images/wireframe.png)
 
 
 **Mechanism:**
