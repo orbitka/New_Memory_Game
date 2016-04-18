@@ -1,19 +1,23 @@
-=====================
-MAIN FUNCTIONALITIES
-=====================
-This is a simple memory game based on javaScript. The objective is to find hidden pairs of cards.
+SIMPLE MEMORY GAME 
 
-Cards are made of colorful travel photos.
+**Main functionalities:**
 
-The game board consists of pairs of cards turned face down.
+- The objective is to find hidden pairs of cards.
 
-Player clicks 2 cards, they turn face up. If both cards match, they stay up, otherwise they turn back and hide again.
+- Cards are made of colorful travel photos.
 
-When all cards are turned face up the game ends.
+- The game board consists of pairs of cards turned face down.
 
-![Memory Game](images/wireframe.png)
+- Player clicks 2 cards, they turn face up. If both cards match, they stay up, otherwise they turn back and hide again.
+
+- When all cards are turned face up the game ends.
+
+- ![Memory Game](images/wireframe.png)
+
 
 **Mechanism:**
+
+- This is a simple memory game based on javaScript. 
 
 - Pairs of cards are stored in the array.
 
