@@ -105,6 +105,8 @@ console.log("Full set of cards to display (workingArray): number of cards: " + w
 //to mix the cards into random order
 
 
+
+
 //---^|^|^--UP TO HERE NO BUGS - remove console.logs when finished --^|^|^----
 
 //to add divs to the page to create cards-display---
@@ -120,10 +122,6 @@ function dynamicDiv() {
   newDiv.class = "single-card-div"; //add class to each new div for css styling
   document.getElementById("cards-display").appendChild(newDiv);
 }
-
-
-
-
 
 
 
