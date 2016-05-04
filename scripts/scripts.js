@@ -82,14 +82,20 @@ var memoryGame = {};
 
 //---the result has to be var firstHalf = array of 12 cards---
 
+//===============================
+//===============================
+//===============================
 //--FROM HERE IT IS HARDCODED - TILL I FIX THE PREVIOUS PART (SELECTION OF 12 UNIQUE RANDOM CARDS INTO the firstHalf array)
+//===============================
+//===============================
+//===============================
 
 //HARDCOADED variable firstHalf:
 firstHalf = [
   'images/photomix/photo01', 'images/photomix/photo02', 'images/photomix/photo03', 'images/photomix/photo04', 'images/photomix/photo05', 'images/photomix/photo06', 'images/photomix/photo07', 'images/photomix/photo08', 'images/photomix/photo09', 'images/photomix/photo10', 'images/photomix/photo11', 'images/photomix/photo12'
 ];
 
-//-------now we multiply the firstHalf of working array so we a new array consisting of pair of cards
+//-------now we multiply the firstHalf of working array so we have a new array consisting of pairs of cards
 var workingArray =[];
 var secondHalf = firstHalf;
 
@@ -97,32 +103,69 @@ workingArray = firstHalf.concat(secondHalf);
 
 //------to test-----
 console.log("firstHalf = " + firstHalf);
-console.log("secondHalf = " + secondHalf);
 console.log("Full set of cards to display (workingArray): number of cards: " + workingArray.length + "|| CARDS: " + workingArray);
 
 // now we have a workingArray which consists of 24 cards (12 pairs)
+
+//---^|^|^--UP TO HERE NO BUGS - remove console.logs when finished --^|^|^----
+
 
 //to mix the cards into random order
 
 
 
 
-//---^|^|^--UP TO HERE NO BUGS - remove console.logs when finished --^|^|^----
-
-//to add divs to the page to create cards-display---
-function dynamicDiv() {
+//add divs to the page to create cards-display---
+function dynamicDiv(imageSource) {
 
   var newDiv = document.createElement("div"); //create a div element
-
   var cardImage = document.createElement("img");
 
-
+// Give cardImage attribute 'src' of input-src
+  cardImage.setAttribute("src",imageSource+'.jpg')
   newDiv.appendChild(cardImage)//append image to the div
 
-  newDiv.class = "single-card-div"; //add class to each new div for css styling
+  newDiv.classList.add("single-card-div"); //add class to each new div for css styling
   document.getElementById("cards-display").appendChild(newDiv);
 }
 
+function flipCard(){
+  console.log('flipCard image is ' + $(this).children().eq(0).attr('src'));
+  // First, use .css() to remove $(this) background-image styling, and change opacity of $(this).children().eq(0) to 1
+
+  $(this).children().eq(0).css('opacity',1).addClass('faceup');
 
 
-//-----HERE TO CONTINUE------
+  // Second, create a counter so that the game knows if one card is flipped or two
+  var counter = $('.faceup').length;
+
+  // Third, write a conditional that does nothing if one card is flipped, and if two cards are flipped, it checks the image src to see if they match
+  if (counter === 2){
+    var cardOneImage = $('.faceup').eq(0).attr('src');
+    var cardTwoImage = $('.faceup').eq(1).attr('src');
+    if (cardOneImage === cardTwoImage) {
+      console.log('cards matched');
+    } else {
+      console.log('no match');
+      // Fourth, write functionality that will flip cards down if they don't match
+    }
+    $('.faceup').removeClass('faceup');
+  }
+
+// Fifth, use stackOverflow to find a "shuffle" function for workingArray to randomize the order (do this outside of flipCard)
+
+
+
+};
+
+$(document).ready(function(){
+  //Iterate through workingArray such that you run DynamicDiv for each entry in workingArray
+  //This will create a new div, which will contain images of the src from the workingArray
+  for (var i = 0; i < workingArray.length; i++) {
+    // console.log(workingArray[i])
+    dynamicDiv(workingArray[i])
+  }
+  // dynamicDiv()
+  $('.single-card-div').on('click', flipCard);
+
+})

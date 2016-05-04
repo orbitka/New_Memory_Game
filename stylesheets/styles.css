@@ -1,5 +1,5 @@
 html {
-  font-size: 10px;
+  /*font-size: 10px;*/
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: bold;
   text-align: center;
@@ -8,7 +8,7 @@ html {
 body {
   background: purple;
   max-width: 1000px;
-  border: dotted 15px black;
+  border: outset 14px silver;
   margin: auto;
 }
 
@@ -18,17 +18,41 @@ header {
 
 footer {
   background: magenta;
+  line-height: 4em;
 }
+
+/*p {
+  color: white;
+}*/
+
 #cards-display {
-  background-color: yellow;
+  margin: auto;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
 .single-card-div {
-  width: 150px
-  height: 100px;
-  background-color: salmon;
-}
+  width: 220px;
+  background-image: url("../images/card-reverse.jpg");
+  background-size: 100%;
+  background-position: center;
+  float: left;
+  border: 14px outset white;
+  position: relative;
+  line-height: 140px;
+  }
+
+.single-card-div img {
+  width: 220px;
+  height: 140px;
+  opacity: 0;
+  vertical-align: middle;
+ }
 
 #game-container {
-  background: silver;
+  /*background: silver;*/
 }
