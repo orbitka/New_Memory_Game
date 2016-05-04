@@ -1,6 +1,4 @@
 html {
-  /*font-size: 10px;*/
-  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: bold;
   text-align: center;
 }
@@ -13,6 +11,8 @@ body {
 }
 
 header {
+  font-family: 'Lobster Two', cursive, 'Arial', sans-serif;
+  font-size: 2em;
   background: magenta;
 }
 
@@ -21,12 +21,61 @@ footer {
   line-height: 4em;
 }
 
-/*p {
-  color: white;
-}*/
+#start-button {
+  display: inline-block;
+  padding: 15px 25px;
+  width: 200px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkred;
+  border: outset 9px;
+  border-radius: 50px;
+}
+
+#start-button:hover {
+  background-color: red;
+}
+
+#start-button:active {
+  background-color: red;
+  box-shadow: 2px 2px gray;
+  transform: translateY(4px);
+}
+
+
+#reset-button {
+  display: inline-block;
+  padding: 15px 25px;
+  width: 200px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkgreen;
+  border: outset 9px;
+  border-radius: 50px;
+}
+
+#reset-button:hover {
+  background-color: green;
+}
+
+#reset-button:active {
+  background-color: green;
+  box-shadow: 2px 2px gray;
+  transform: translateY(4px);
+}
 
 #cards-display {
   margin: auto;
+  padding-left: 4px;
+
 }
 
 .clearfix::after {
