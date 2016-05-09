@@ -58,31 +58,6 @@ var memoryGame = {};
 // console.log("Selected Number of Cards (Hardprinted): " + numberOfCards);
 // console.log("selected cards: " + selectedCards);
 
-//---THIS PART DOES NOT WORK!!!!!!!------
-
-//from the "selectedTheme" we take out numberOfCards from our selectedTheme of cards and create a new array "firstHalf"
-//
-// var firstHalf = [];
-// var secondHalf = firstHalf;
-//
-// var array = memoryGame.themes.photomix.cards;
-// function getRandomIndex(){
-//     num = Math.floor(Math.random()*array.length)
-//     return num;
-// }
-//
-// function makeImageArray(array){
-//   var j = getRandomIndex()
-//   for (var i = 0; i < array.length; i++) {
-//     num = array.slice(j, 1)
-//     firstHalf.push(num)
-//   }
-//   console.log('firstHalf = ' + firstHalf);
-// }
-
-//---the result has to be var firstHalf = array of 12 cards---
-
-//===============================
 //===============================
 //===============================
 //--FROM HERE IT IS HARDCODED - TILL I FIX THE PREVIOUS PART (SELECTION OF 12 UNIQUE RANDOM CARDS INTO the firstHalf array)
@@ -101,16 +76,23 @@ var secondHalf = firstHalf;
 
 workingArray = firstHalf.concat(secondHalf);
 
-//------to test-----
-console.log("firstHalf = " + firstHalf);
-console.log("Full set of cards to display (workingArray): number of cards: " + workingArray.length + "|| CARDS: " + workingArray);
+//This block of code is from StackOverflow - Sergey helped!
+Array.prototype.shuffle = function() {
+  var i = this.length, j, temp;
+  if ( i == 0 ) return this;
+  while ( --i ) {
+     j = Math.floor( Math.random() * ( i + 1 ) );
+     temp = this[i];
+     this[i] = this[j];
+     this[j] = temp;
+  }
+  return this;
+}
+
+workingArray.shuffle();
+
 
 // now we have a workingArray which consists of 24 cards (12 pairs)
-
-//---^|^|^--UP TO HERE NO BUGS - remove console.logs when finished --^|^|^----
-
-
-//to mix the cards into random order
 
 
 
@@ -133,29 +115,29 @@ function flipCard(){
   console.log('flipCard image is ' + $(this).children().eq(0).attr('src'));
   // First, use .css() to remove $(this) background-image styling, and change opacity of $(this).children().eq(0) to 1
 
-  $(this).children().eq(0).css('opacity',1).addClass('faceup');
+  $(this).children().eq(0).css('opacity',1).addClass('selected');
 
 
   // Second, create a counter so that the game knows if one card is flipped or two
-  var counter = $('.faceup').length;
+  var counter = $('.selected').length;
 
   // Third, write a conditional that does nothing if one card is flipped, and if two cards are flipped, it checks the image src to see if they match
   if (counter === 2){
-    var cardOneImage = $('.faceup').eq(0).attr('src');
-    var cardTwoImage = $('.faceup').eq(1).attr('src');
+    var cardOneImage = $('.selected').eq(0).attr('src');
+    var cardTwoImage = $('.selected').eq(1).attr('src');
     if (cardOneImage === cardTwoImage) {
       console.log('cards matched');
+      $('.selected').removeClass('selected');
     } else {
       console.log('no match');
       // Fourth, write functionality that will flip cards down if they don't match
+      setTimeout(function(){
+        console.log($('.selected'));
+        $('.selected').css('opacity',0);
+        $('.selected').removeClass('selected');
+      }, 1000);
     }
-    $('.faceup').removeClass('faceup');
   }
-
-// Fifth, use stackOverflow to find a "shuffle" function for workingArray to randomize the order (do this outside of flipCard)
-
-
-
 };
 
 $(document).ready(function(){
