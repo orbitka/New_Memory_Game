@@ -17,7 +17,7 @@ SIMPLE MEMORY GAME
 
 **Mechanism:**
 
-- This is a simple memory game based on javaScript. 
+- This is a simple memory game based on javaScript (with HTML page structure and CSS styling). 
 
 - Pairs of cards are stored in the array.
 
