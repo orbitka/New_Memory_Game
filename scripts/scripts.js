@@ -49,7 +49,8 @@ function dynamicDiv(imageSource) {
 }
 
 function flipCard(){
-  console.log('flipCard image is ' + $(this).children().eq(0).attr('src'));
+  // console.log('flipCard image is ' + $(this).children().eq(0).attr('src'));
+
   //----- First, use .css() to remove $(this) background-image styling, and change opacity of $(this).children().eq(0) to 1
 
   $(this).children().eq(0).css('opacity',1).addClass('selected');
@@ -64,12 +65,19 @@ function flipCard(){
     var cardTwoImage = $('.selected').eq(1).attr('src');
     if (cardOneImage === cardTwoImage) {
       console.log('cards matched');
+      $('.selected').addClass('faceUp');
       $('.selected').removeClass('selected');
+
+      var cardsUp = $('.faceUp').length;
+      if (cardsUp === workingArray.length) {
+          alert("Bravo!!! You did it! Press NEW GAME to play again");
+      }
+
     } else {
-      console.log('no match');
+      // console.log('no match');
+
       //----- Fourth, write functionality that will flip cards down if they don't match
       setTimeout(function(){
-        console.log($('.selected'));
         $('.selected').css('opacity',0);
         $('.selected').removeClass('selected');
       }, 1000);
