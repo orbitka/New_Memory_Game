@@ -2,6 +2,8 @@ SIMPLE MEMORY GAME
 
 **Main functionalities:**
 
+- This is a simple memory game based on javaScript (with HTML page structure and CSS styling). 
+
 - The objective is to find hidden pairs of cards.
 
 - Cards are made of colorful travel photos.
@@ -16,8 +18,6 @@ SIMPLE MEMORY GAME
 
 
 **Mechanism:**
-
-- This is a simple memory game based on javaScript (with HTML page structure and CSS styling). 
 
 - Pairs of cards are stored in the array.
 
