@@ -1,24 +1,36 @@
 html {
   font-weight: bold;
   text-align: center;
+  background: purple;
+  padding: 15px;
+
 }
 
 body {
-  background: purple;
-  max-width: 1000px;
+  background: deeppink;
+  max-width: 900px;
   border: outset 14px silver;
   margin: auto;
 }
 
 header {
   font-family: 'Lobster Two', cursive, 'Arial', sans-serif;
-  font-size: 2em;
+  font-size: 3em;
   background: magenta;
+  text-shadow: 1px 1px 5px white, 0 0 1em darkslateblue, 0 0 0.2em blue;
+   color: black;
 }
 
 footer {
   background: magenta;
-  line-height: 4em;
+  line-height: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: thistle;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 #start-button {
@@ -47,31 +59,6 @@ footer {
 }
 
 
-#reset-button {
-  display: inline-block;
-  padding: 15px 25px;
-  width: 200px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: darkgreen;
-  border: outset 9px;
-  border-radius: 50px;
-}
-
-#reset-button:hover {
-  background-color: green;
-}
-
-#reset-button:active {
-  background-color: green;
-  box-shadow: 2px 2px gray;
-  transform: translateY(4px);
-}
-
 #cards-display {
   margin: auto;
   padding-left: 4px;
@@ -85,19 +72,19 @@ footer {
 }
 
 .single-card-div {
-  width: 220px;
+  width: 200px;
   background-image: url("../images/card-reverse.jpg");
   background-size: 100%;
   background-position: center;
   float: left;
-  border: 14px outset white;
+  border: 10px outset white;
   position: relative;
-  line-height: 140px;
+  line-height: 100px;
   }
 
 .single-card-div img {
-  width: 220px;
-  height: 140px;
+  width: 200px;
+  height: 130px;
   opacity: 0;
   vertical-align: middle;
  }
