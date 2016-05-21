@@ -70,7 +70,7 @@ function flipCard(){
 
       var cardsUp = $('.faceUp').length;
       if (cardsUp === workingArray.length) {
-          alert("Bravo!!! You did it! Press NEW GAME to play again");
+          alert("Bravo!!!");
       }
 
     } else {

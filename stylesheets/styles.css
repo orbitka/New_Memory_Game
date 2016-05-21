@@ -1,11 +1,12 @@
 html {
   font-weight: bold;
   text-align: center;
+  background: purple;
 }
 
 body {
-  background: purple;
-  max-width: 1000px;
+  background: violet;
+  max-width: 900px;
   border: outset 14px silver;
   margin: auto;
 }
@@ -85,19 +86,19 @@ footer {
 }
 
 .single-card-div {
-  width: 220px;
+  width: 200px;
   background-image: url("../images/card-reverse.jpg");
   background-size: 100%;
   background-position: center;
   float: left;
-  border: 14px outset white;
+  border: 10px outset white;
   position: relative;
   line-height: 140px;
   }
 
 .single-card-div img {
-  width: 220px;
-  height: 140px;
+  width: 200px;
+  height: 132px;
   opacity: 0;
   vertical-align: middle;
  }
