@@ -27,8 +27,8 @@ SIMPLE MEMORY GAME
 
 - Assigned "Mouseclick" to cards turns two selected cards up.
 
-- Selected cards are compared: if they are the same, they stay up, else they turn back after 3-sec. "timeout".
+- Selected cards are compared: if they are the same, they stay up, else they turn back after 1-sec. "timeout".
 
 - When all the cards are matched the game is finished.
 
-- Reset the board to change the order of cards and start the new game.
+- Press the button NEW GAME to reset the board, change the order of cards and play again.
