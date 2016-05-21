@@ -10,7 +10,7 @@ http://orbitka.github.io/New_Memory_Game/
 
 - The objective is to find hidden pairs of cards.
 
-- Cards are made of colorful travel photos.
+- Cards are made of colorful travel photos from the blog orbitka.com.
 
 - The game board consists of pairs of cards turned face down.
 
