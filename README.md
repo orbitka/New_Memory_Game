@@ -1,9 +1,10 @@
-##SIMPLE MEMORY GAME
+#SIMPLE MEMORY GAME
 
-Final version:  http://orbitka.github.io/New_Memory_Game/
+Play the game here:  
+http://orbitka.github.io/New_Memory_Game/
 
 
-**Main functionalities:**
+#Main functionalities:
 
 - This is a simple memory game based on javaScript (with HTML page structure and CSS styling). 
 
@@ -20,7 +21,7 @@ Final version:  http://orbitka.github.io/New_Memory_Game/
 ![Memory Game](images/wireframe.png)
 
 
-**Mechanism:**
+##Mechanism:
 
 - Pairs of cards are stored in the array.
 
